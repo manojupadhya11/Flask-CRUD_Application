@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>CRUD Application</title>
+        <link  href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel = 'stylesheet'>
+        <link rel="shortcut icon" href="{{url_for('static', filename = 'teacher.png')}}">
+
+    </head>
+    <body>
+    {% block body %}
+        <div class="container"> 
+            <div class="well text-center">
+                <h1>Python Flask CRUD Web Application</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col md-12">
+
+                        <h2>Student List <button type="button" class="btn btn-success pull-right" data-toggle="modal"
+                             data-target="#mymodal">Add Student Data </button></h2>
+                    
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Serial</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Manoj</td>
+                            <td>manoj@gmail.com</td>
+                            <td>9100603355</td>
+                            <td>
+                                <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
+                                <a href="" class="btn btn-danger btn-xs" onclick = "return confirm('Are You Sure To Delete?')">Delete</a>
+                            </td>
+
+
+                        </tr>
+
+
+                    </table>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+{% endblock %}
+
+            <div class="well">
+                <h3>Website:ManojUpadhya.com
+                <span class="pull-right">Like Us:www.instagram.com/manu_s_upadhya</span>
+                </h3>
+            </div>
+        </div>
+
+
+    </body>
+    
+<script type="text/javascript" src = "{{url_for('static', filename='js/jquery-3.2.1.min.js')}}"></script>    
+<script type="text/javascript" src = "{{url_for('static', filename='js/bootstrap.min.js')}}"></script> 
+</html>
